@@ -1,0 +1,19 @@
+mixin sProdSlider(data)
+	// start sProdSlider
+	+b.SECTION.sProdSlider.section#sProdSlider&attributes(attributes)
+		.container
+			+b.section-title
+				.row
+					.col
+						h2 ЕЩЕ ИЗ КОЛЛЕКЦИИ
+					.col-auto
+						.slider-nav
+							+arrow
+						
+			+e.slider--js.swiper
+				.swiper-wrapper
+					- for (var x = 0; x < 6; x++)
+						+e.slide.swiper-slide
+							+e.item(href="#")
+								img(src="img/prod.png", loading="lazy" alt="").res-i
+	// end sProdSlider

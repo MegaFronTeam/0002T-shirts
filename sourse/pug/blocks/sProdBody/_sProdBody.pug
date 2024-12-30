@@ -1,0 +1,16 @@
+mixin sProdBody(data)
+	// start sProdBody
+	+b.SECTION.sProdBody.section#sProdBody&attributes(attributes)
+		.container
+			+b.section-title
+				h2 Детали
+				
+			+e.row.row
+				.col-md-8 
+					p За технологиями будущее. За изучением космома будущее. 030333 - секретный код, обозначающий: 
+					br
+					| Око За Око, Зуб За Зуб.
+				- for (var x = 0; x < 3; x++)
+					+e.col-img.col-4
+						+img(`img/prod-body-${x + 1}.png`).res-i
+	// end sProdBody

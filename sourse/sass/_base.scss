@@ -256,9 +256,9 @@ ul {
 .swiper-button-hand {
 	width: var(--swiperArrowSize);
 	height: var(--swiperArrowSize);
-	border-radius: 50%;
+	border-radius: rem(12);
 	background-color: var(--swiperBgDef);
-	border: 2px solid var(--swiperBorderColorDef);
+	border: 1px solid var(--swiperBorderColorDef);
 	color: var(--swiperColorDef);
 	@include bgs;
 	outline: none !important;
@@ -269,6 +269,7 @@ ul {
 	box-shadow: 0 15px 60px rgba(0, 0, 0, 0.1);
 	@include mt;
 	user-select: none;
+	cursor: pointer;
 
 	&:hover {
 		background-color: var(--swiperBgDefHover);
@@ -277,7 +278,9 @@ ul {
 	}
 
 	.icon {
-		font-size: rem(12);
+		font-size: rem(90);
+		position: absolute;
+		@include a-cent1;
 	}
 
 	&::after {
@@ -478,5 +481,25 @@ iframe {
 			// width: auto;
 			max-height: 100%;
 		}
+	}
+}
+
+.link-download {
+	display: inline-flex;
+	align-items: center;
+	width: 100%;
+	justify-content: space-between;
+	margin-bottom: 0.8em;
+	img {
+		width: rem(50);
+		margin-left: rem(48);
+	}
+}
+
+@include media-breakpoint-up(xxxl) {
+	.h1 h1,
+	h2,
+	.h2 {
+		font-size: rem(100);
 	}
 }

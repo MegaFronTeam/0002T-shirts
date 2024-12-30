@@ -1,0 +1,18 @@
+mixin sProdHead(data)
+	// start sProdHead
+	+b.SECTION.sProdHead.section#sProdHead&attributes(attributes)
+		.container
+			+e.row.row
+				.col-md-6
+					img(src="img/prod.png", alt="").res-i
+				.col
+					+e.description
+						h1  future
+						p Коллекция: space collection
+
+						+e.footer
+							a.link-download(href="#") Загрузить файл
+								img(src="img/download.png", alt="")
+							p.mb-0 Размер принта может быть изменен по индивидуальному требованию. 
+					
+	// end sProdHead

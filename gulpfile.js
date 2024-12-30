@@ -6,7 +6,7 @@ let publicPath = "public",
 
 import pkg from "gulp";
 const {gulp, src, dest, parallel, series, watch} = pkg;
-
+import cache from "gulp-cache";
 import {deleteAsync} from "del";
 import pug from "gulp-pug";
 import notify from "gulp-notify";
@@ -35,6 +35,7 @@ import data from "gulp-data";
 import fs from "fs";
 
 const dataFromFile = JSON.parse(fs.readFileSync(source + "/pug/content.json"));
+
 class gs {
 	static browsersync() {
 		browserSync.init({
@@ -52,6 +53,9 @@ class gs {
 		});
 	}
 
+	static clearCache(done) {
+		return cache.clearAll(done);
+	}
 	static pugFiles() {
 		return (
 			src([source + "/pug/pages/**/*.pug"])
@@ -328,7 +332,7 @@ class gs {
 }
 export let imgAll = series(gs.cleanImg, gs.img);
 export let libs = series(gs.cleanLibs, gs.copyLibs);
-export let sprite = series(gs.svg, gs.svgCopy);
+export let sprite = series(gs.svg, gs.svgCopy, gs.clearCache);
 // export let sprite2 = series(gs.svgC, gs.svgCopyC);
 export let styles = parallel(gs.bootstrapStyles, gs.styles);
 

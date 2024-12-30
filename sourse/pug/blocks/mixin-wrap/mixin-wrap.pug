@@ -38,9 +38,10 @@ mixin page-head(t)
 			+e.back(href="#") 
 				img(src="img/arrow-right.png", alt="")
 				| Вернуться к коллекциям
-			+e.title
-				h1= t
-				img(src="img/logo-y-black.png", alt="")
+			if t
+				+e.title
+					h1= t
+					img(src="img/logo-y-black.png", alt="")
 			block
 
 mixin parts(elem)

@@ -49,15 +49,12 @@ function eventHandler() {
 		watchOverflow: true,
 	});
 
-	const swiper4 = new Swiper(".sBanners__slider--js", {
-		// slidesPerView: 5,
-		...defaultSl,
+	const swiper4 = new Swiper(".sProdSlider__slider--js", {
 		slidesPerView: "auto",
-		freeMode: true,
-		loopFillGroupWithBlank: true,
-		touchRatio: 0.2,
-		slideToClickedSlide: true,
-		freeModeMomentum: true,
+		navigation: {
+			nextEl: ".sProdSlider .swiper-button-next",
+			prevEl: ".sProdSlider .swiper-button-prev",
+		},
 	});
 }
 if (document.readyState !== "loading") {

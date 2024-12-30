@@ -1,0 +1,58 @@
+// start .sProdHead
+.sProdHead {
+	--sPT: #{rem(0)};
+	// --sPB: #{rem()};
+	// --sTPB: #{rem()};
+
+	&__row {
+		--bs-gutter-x: #{rem(100)};
+		--bs-gutter-y: var(--bs-gutter-x);
+	}
+	.section-title {
+	}
+	&__col {
+	}
+	&__item {
+	}
+	h1 {
+		text-transform: uppercase;
+		line-height: 1;
+		margin-bottom: 0;
+		margin-bottom: 0.2em;
+		font-weight: normal;
+	}
+
+	&__description {
+		display: flex;
+		min-height: 100%;
+		flex-direction: column;
+	}
+
+	&__footer {
+		margin-top: auto;
+		padding-top: 1rem;
+		max-width: rem(440);
+		a {
+			font-size: rem(40);
+		}
+		p {
+			color: rgb(121, 121, 121);
+			line-height: 1.2;
+		}
+	}
+
+	@include media-breakpoint-up(xl) {
+	}
+	@include media-breakpoint-up(lg) {
+	}
+	@include media-breakpoint-up(md) {
+	}
+	@include media-breakpoint-up(sm) {
+	}
+	@include media-breakpoint-between(md, xl) {
+	}
+	@include media-breakpoint-only(xl) {
+	}
+	@include media-breakpoint-down(xl) {
+	}
+} // end.sProdHead

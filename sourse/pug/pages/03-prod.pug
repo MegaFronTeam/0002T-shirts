@@ -1,0 +1,31 @@
+extends ../layout/main.pug
+
+include ../blocks/headerBlock/_headerBlock.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sContent/_sContent.pug
+ 
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sAbout/_sAbout.pug
+include ../blocks/sProdHead/_sProdHead.pug
+include ../blocks/sProdBody/_sProdBody.pug
+include ../blocks/sProdSlider/_sProdSlider.pug
+
+block variables
+	- let  mainPage= 'main-page' 
+	- let  bg= null
+
+block title
+	- let  title= 'prod'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	
+	
+	+parts('header')
+	main
+		+page-head() 
+		+sProdHead
+		+sProdBody
+		+sProdSlider
+	+parts('footer')
