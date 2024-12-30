@@ -1,0 +1,45 @@
+extends ../layout/main.pug
+
+include ../blocks/headerBlock/_headerBlock.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sContent/_sContent.pug
+ 
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sAbout/_sAbout.pug
+include ../blocks/sCategories/_sCategories.pug
+
+block variables
+	- let  mainPage= 'main-page' 
+	- let  bg= null
+
+block title
+	- let  title= 'first collection'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	
+	
+	+parts('header')
+	main
+		+page-head(title)
+			p First collection - коллекция, с которой все началось.
+				|
+				| Сюжет коллекции базируется на фирменном стиле
+				|
+				| Кирилла Червонного и космической тематике. 
+		
+		+b.first-category
+			.container
+				+e.row
+					+e.item(href="#")
+						+img("img/first_1.png" )
+					+e.item(href="#")
+						+img("img/first_2.png" )
+					.w-100
+					+e.item(href="#")
+						+img("img/first_3.png" )
+					.w-100
+					+e.item(href="#")
+						+img("img/first_4.png" )
+	+parts('footer')

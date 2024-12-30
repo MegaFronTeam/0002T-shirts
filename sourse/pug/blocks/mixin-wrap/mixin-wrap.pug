@@ -32,13 +32,16 @@ mixin search()
 			button 
 				+icon("search")
 
-mixin page-head(t,...items)
+mixin page-head(t)
 	+b.page-head
-		- let l = items.length
 		.container
-			+breadcrumb('Главная',...items)
-
-			h1= t
+			+e.back(href="#") 
+				img(src="img/arrow-right.png", alt="")
+				| Вернуться к коллекциям
+			+e.title
+				h1= t
+				img(src="img/logo-y-black.png", alt="")
+			block
 
 mixin parts(elem)
 	script.
