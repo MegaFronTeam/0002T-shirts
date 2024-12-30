@@ -21,14 +21,17 @@ mixin top-nav()
 	// start top-nav
 	+b.top-nav.block-with-lazy
 		.container
-			+e.row.row
-				.col-4
-				.col.order-lg-0.order-last
-					.menu-mobile.menu-mobile--js
-						.menu-mobile__inner
-							+menu-toggle()
-							+mnu()
-					
-				.col-auto.d-lg-none
-					+menu-toggle()
+			.row
+				.col-md-auto.col
+					+b.logo(href="/")
+						img(src="img/logo-bad.png", alt="logo")
+				+e.col-center.col-auto
+					+b.logo(href="/")
+						img(src="img/logo-y.png", alt="logo")
+				.col
+					nav
+						ul
+							li: a(href="#") collections
+							li: a(href="#") contact
+							li: a(href="#") home
 	// end top-nav

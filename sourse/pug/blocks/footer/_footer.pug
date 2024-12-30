@@ -2,8 +2,26 @@ mixin footer()
 	+b.FOOTER.footer.section
 		.container
 			.row
-				.col
-					
-				.col Footer
-				.col
-				.col-auto
+				.col-md
+					a(href="/")
+						img(src="img/logo-b-footer.png", alt="logo")
+					.mb-2
+					a(href="/")
+						img(src="img/logo-main-footer.png", alt="logo") 
+				+e.center-col.col-auto
+					+e.title Кирилл Червонный.
+						br
+						| Основатель бренда.
+					+e.link(href="tel:+7(965)079-85-86") 
+						img(src="img/phone.png", alt="")
+						| +7 (965) 079-85-86
+					br
+					+e.link(href="@Kenneth_McCormick") 
+						img(src="img/tg.png", alt="")
+						| @Kenneth_McCormick
+				.col-sm.text-sm-end
+					nav
+						ul
+							li: a(href="#") home
+							li: a(href="#") contact
+							li: a(href="#") collections
