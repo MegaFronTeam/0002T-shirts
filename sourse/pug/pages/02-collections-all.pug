@@ -1,0 +1,42 @@
+extends ../layout/main.pug
+
+include ../blocks/headerBlock/_headerBlock.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sContent/_sContent.pug
+ 
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sAbout/_sAbout.pug
+include ../blocks/sCategories/_sCategories.pug
+
+block variables
+	- let  mainPage= 'main-page' 
+	- let  bg= null
+
+block title
+	- let  title= 'collections'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	
+	
+	+parts('header')
+	main
+		+page-head(title) 
+		
+		+b.categories
+			.container
+				mixin item(i,p1, p2)
+					+b.item-categories 
+						.img-wrap(href="#")
+							img(src=`img/categories-${i}.png`, loading="lazy", alt="").res-i
+						.description
+							a(href="#")= p1
+				+item('1','first')
+				+item('2','second')
+				+item('3','gold collection')
+				+item('4','mix')
+				+item('5','teslab')
+				+item('6','space collection')
+				+item('7','the future of fantasy')
+	+parts('footer')
