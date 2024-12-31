@@ -1,0 +1,45 @@
+extends ../layout/main.pug
+
+include ../blocks/headerBlock/_headerBlock.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sContent/_sContent.pug
+ 
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sAbout/_sAbout.pug
+include ../blocks/sCategories/_sCategories.pug
+
+block variables
+	- let  mainPage= 'main-page' 
+	- let  bg= null
+
+block title
+	- let  title= 'space collection'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	
+	
+	+parts('header')
+	main
+		+page-head(title)
+			p Space collection - космическая коллекция. 
+				br 
+				| Здесь о любви в космическому пространству, его прогрессе и силе.
+		+b.category-space
+			.container
+				+e.row
+					mixin item(i,p1)
+						+b.item-space
+							+e.inner
+								+e.img-wrap(href="#")
+									img(src=`img/space-${i}.png`, loading="lazy", alt="").res-i
+								if p1
+									+e.description
+										p!= p1
+					+item('1','За технологиями будущее.  За изучением космома будущее.  030333 - секретный код, обозначающий: Око За  Око, Зуб За Зуб. ')
+					+item('2',' Космос. Запуск ракеты. Что может быть лучше?')
+					+item('3','SPACEX - двигатель прогресса. ')
+					+item('4')
+					+item('5',' SPACEX STARSHIPS. Кайф. Мощь.')
+	+parts('footer')
