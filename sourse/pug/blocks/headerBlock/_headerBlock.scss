@@ -11,6 +11,9 @@
 	padding-top: rem(100);
 
 	// min-height: 100vh;
+	&__logo {
+		text-align: center;
+	}
 	img {
 		max-width: 100%;
 		height: auto;
