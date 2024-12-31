@@ -774,7 +774,9 @@ iframe {
 }
 
 .category-space {
-	padding-top: rem(200);
+	@include media-breakpoint-up(md) {
+		padding-top: rem(200);
+	}
 	&__row {
 		display: flex;
 		flex-wrap: wrap;
@@ -863,6 +865,31 @@ iframe {
 			p {
 				max-width: rem(300);
 			}
+		}
+	}
+}
+
+.item-teslab {
+	margin-bottom: rem(124);
+	&:nth-child(1) {
+		p {
+			@include media-breakpoint-up(lg) {
+				margin-bottom: -3em;
+			}
+			margin-left: auto;
+			max-width: rem(600);
+		}
+	}
+	&:nth-child(2) {
+		p {
+			margin-left: 2em;
+			max-width: rem(500);
+		}
+	}
+	&:nth-child(3) {
+		p {
+			margin-left: 2em;
+			max-width: rem(600);
 		}
 	}
 }

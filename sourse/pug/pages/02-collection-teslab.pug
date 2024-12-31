@@ -1,0 +1,52 @@
+extends ../layout/main.pug
+
+include ../blocks/headerBlock/_headerBlock.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sContent/_sContent.pug
+ 
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sAbout/_sAbout.pug
+include ../blocks/sCategories/_sCategories.pug
+
+block variables
+	- let  mainPage= `main-page` 
+	- let  bg= null
+
+block title
+	- let  title= `mix collection`
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	
+	
+	+parts(`header`)
+	main
+		+page-head(title)
+			p Коллекция, разработанная для сервиса по обслуживанию автомобилей Tesla.
+				br
+				| Эксклюзивно. Минималистично. Teslab.
+		
+		+b.category-teslab
+			.container
+				mixin item(i,p1, p2)
+					+b.item-teslab
+						+e.description
+							block
+						+e.img-wrap(href="#")
+							img(src=`img/teslab-${i}.png`, loading="lazy", alt="").res-i
+				+item('1','')
+					p Серия «SEXY» разбита на ранги:
+						br
+						| - технические специалисты; 
+						br
+						| - менеджеры;
+						br
+						| - руководители отделов;
+						br
+						| - стажеры.
+				+item('2','')
+					p У серии есть дополнительный дизайн для оставшихся групп работников.
+				+item('3','')
+					p Для преданных фанатов разработаны  дополнительные модели:
+	+parts(`footer`)
