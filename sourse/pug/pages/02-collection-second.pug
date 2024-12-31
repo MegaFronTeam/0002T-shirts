@@ -1,0 +1,45 @@
+extends ../layout/main.pug
+
+include ../blocks/headerBlock/_headerBlock.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sContent/_sContent.pug
+ 
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sAbout/_sAbout.pug
+include ../blocks/sCategories/_sCategories.pug
+
+block variables
+	- let  mainPage= 'main-page' 
+	- let  bg= null
+
+block title
+	- let  title= 'second collection'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	
+	
+	+parts('header')
+	main
+		+page-head(title)
+			p Second collection - продолжение the first collection.
+				br
+				| Космическая, фирменная концепция chervonnyi/
+		
+		+b.category-second
+			.container
+				+e.row
+					+e.item(href="#")
+						+img("img/second-1.png" )
+					+e.item(href="#")
+						+img("img/second-2.png" )
+					.w-100
+					+e.item(href="#")
+						+img("img/second-3.png" )
+					+e.item(href="#")
+						+img("img/second-4.png" )
+					.w-100
+					+e.item(href="#")
+						+img("img/second-5.png" )
+	+parts('footer')
