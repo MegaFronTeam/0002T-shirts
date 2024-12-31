@@ -1055,3 +1055,22 @@ iframe {
 		}
 	}
 }
+
+.category-future {
+	&__main-img {
+		margin-bottom: rem(150);
+	}
+	&__seconds-img {
+		margin-inline: auto;
+		max-width: rem(1400);
+	}
+}
+
+.page-future {
+	.page-head {
+		h1 {
+			text-wrap: balance;
+			max-width: rem(1300);
+		}
+	}
+}

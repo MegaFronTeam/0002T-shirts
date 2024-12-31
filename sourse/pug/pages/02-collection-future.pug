@@ -1,0 +1,48 @@
+extends ../layout/main.pug
+
+include ../blocks/headerBlock/_headerBlock.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sContent/_sContent.pug
+ 
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sAbout/_sAbout.pug
+include ../blocks/sCategories/_sCategories.pug
+
+block variables
+	- let  mainPage= `page-future` 
+	- let  bg= null
+
+block title
+	- let  title= `the future or fantasy?`
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	
+	
+	+parts(`header`)
+	main
+		+page-head(title)
+			p Коллекция, смешавшая фантазию с реальностью. 
+				br
+				| Технический прогресс становится масштабнее 
+				br
+				| с каждым днем. Что же будет, если машины возьмут 
+				br
+				| верх над человеком?
+		
+		+b.category-future
+			.container
+				+e.main-img.text-center
+					+img(src="img/future-1.png", alt="")
+				+e.seconds-img.text-center
+					p Winter collection................soon
+					.row.g-2
+
+						.col-6
+							a(href="#") 
+							+img(src=‘"img/future-2.png", alt="")
+						.col-6
+							a(href="#") 
+							+img(src="img/future-3.png", alt="")
+	+parts(`footer`)
