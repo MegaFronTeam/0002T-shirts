@@ -1,0 +1,43 @@
+extends ../layout/main.pug
+
+include ../blocks/headerBlock/_headerBlock.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sContent/_sContent.pug
+ 
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sAbout/_sAbout.pug
+include ../blocks/sCategories/_sCategories.pug
+
+block variables
+	- let  mainPage= `main-page` 
+	- let  bg= null
+
+block title
+	- let  title= `mix collection`
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	
+	
+	+parts(`header`)
+	main
+		+page-head(title)
+			p Mix collection&nbsp;&mdash; настоящий микс из&nbsp;фактов и&nbsp;страстных интересов бренда chervonnyi.
+				br
+				| Космос, Тесла и&nbsp;кодовые знаки&nbsp;&mdash; все здесь.
+		
+		+b.category-mix
+			.container
+				mixin item(i,p1, p2)
+					+b.item-mix
+						+e.img-wrap(href="#")
+							img(src=`img/mix-${i}.png`, loading="lazy", alt="").res-i
+						+e.description
+							p!= p1
+							p!= p2
+				+item(`1`,`Отложу на завтра /<br>  Завтра будет поздно`,`Пара футболок,  напоминающая о том, что выбор  за тобой.`)
+				+item(`2`,`Tesla_set`,`Принт, посвященный большой любви к марке машин Tesla`)
+				+item(`3`,`030333`,`030333&nbsp;&mdash; секретный код, означающий правило: Око&nbsp;За&nbsp;Око, Зуб За&nbsp;Зуб. На&nbsp;фоне кода ангел справедливости.`)
+				+item(`4`,`beyond /<br> вне пределов`,`Название говорит за себя. У космоса нет границ. У наук нет границ. А у вас?`)
+	+parts(`footer`)
