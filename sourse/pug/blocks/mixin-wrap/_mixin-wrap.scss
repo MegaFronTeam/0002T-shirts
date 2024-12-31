@@ -151,6 +151,8 @@
 		@include media-breakpoint-up(sm) {
 			margin-left: rem(100);
 		}
-		max-width: 1000px;
+		text-wrap: balance;
+		// max-width: rem(1100px);
+		font-size: rem(40);
 	}
 }
