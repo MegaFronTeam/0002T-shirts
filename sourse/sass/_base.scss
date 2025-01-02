@@ -1253,11 +1253,32 @@ iframe {
 
 .category-future {
 	&__main-img {
-		margin-bottom: rem(150);
+		img {
+			@extend .res-i;
+		}
+		margin-bottom: rem(100);
+		margin-inline: 0.5rem;
+		@include media-breakpoint-up(sm) {
+			margin-inline: 0;
+			margin-bottom: rem(150);
+			columns: 2;
+			column-gap: 0;
+			img {
+				width: 100%;
+				display: inline-block;
+				&:nth-child(2) {
+					margin-top: -1.6px;
+				}
+				// object-fit: cover;
+			}
+		}
 	}
 	&__seconds-img {
 		margin-inline: auto;
 		max-width: rem(1400);
+		img {
+			@extend .res-i;
+		}
 	}
 }
 
