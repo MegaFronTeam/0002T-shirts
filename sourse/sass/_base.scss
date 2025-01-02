@@ -1254,6 +1254,7 @@ iframe {
 .category-future {
 	&__main-img {
 		img {
+			width: 100%;
 			@extend .res-i;
 		}
 		margin-bottom: rem(100);
@@ -1263,7 +1264,7 @@ iframe {
 			margin-bottom: rem(150);
 			columns: 2;
 			column-gap: 0;
-			img {
+			.img-wrap {
 				width: 100%;
 				display: inline-block;
 				&:nth-child(2) {
