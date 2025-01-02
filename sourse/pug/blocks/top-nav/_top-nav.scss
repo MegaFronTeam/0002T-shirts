@@ -74,6 +74,11 @@
 		}
 	}
 
+	.logo {
+		position: relative;
+		z-index: 3;
+	}
+
 	@include media-breakpoint-up(sm) {
 	}
 
