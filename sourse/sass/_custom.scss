@@ -1,0 +1,359 @@
+.bs-logo {
+	margin-bottom: 2.2rem;
+}
+
+.che-logo {
+}
+
+@media (max-width: 600px) {
+	/* .bs-logo img {width: 80%;} */
+
+	.page-head__title {
+		margin-left: 1.3333333333rem;
+	}
+	.page-head h1:first-letter {
+		margin-left: -1.3333333333rem;
+	}
+
+	.page-head h1 {
+		font-size: calc(2.8rem + 2.0625vw);
+		line-height: 1;
+		margin-top: 0.1em;
+		max-width: 0.3333333333em;
+		text-transform: uppercase;
+	}
+	.page-head__title img {
+		max-width: 1.9rem;
+		position: absolute;
+		right: 0;
+		top: 0;
+	}
+	.logo-footer {
+		width: 80%;
+	}
+	.che-logo img {
+		width: 80%;
+	}
+
+	.page-head p {
+		margin-left: 1.3333333333rem;
+	}
+
+	.page-head__back {
+		align-items: center;
+		display: inline-flex;
+		font-size: calc(1rem);
+	}
+
+	.main-collections .page-head__title img {
+		display: none;
+	}
+
+	.main-collections .page-head h1 {
+		font-size: calc(2.8rem + 1.0625vw);
+		line-height: 1;
+		margin-top: 0.1em;
+		max-width: 0.3333333333em;
+		text-transform: uppercase;
+	}
+}
+@media (max-width: 1000px) {
+	.main-collections .page-head__title img {
+		display: none;
+	}
+}
+@media (max-width: 767px) {
+	.footer-logo {
+		text-align: center;
+	}
+
+	.bs-logo img {
+		width: 100px;
+	}
+	.logo-footer {
+		width: 200px;
+	}
+}
+
+.beloe-beloe {
+	color: #fff !important;
+}
+
+@media (max-width: 1200px) {
+	.beloe-beloe {
+		color: #000000 !important;
+	}
+}
+
+@media (max-width: 360px) {
+	.main-collections .page-head__title img {
+		display: none;
+	}
+	.page-head h1 {
+		font-size: calc(2.7rem + 1.0000625vw);
+		line-height: 1;
+		margin-top: 0.1em;
+		max-width: 0.3333333333em;
+		text-transform: uppercase;
+	}
+
+	.main-collections .page-head h1 {
+		font-size: calc(2.8rem + 0.25vw);
+		line-height: 1;
+		margin-top: 0.1em;
+		max-width: 0.3333333333em;
+		text-transform: uppercase;
+	}
+
+	.page-future .page-head h1 {
+		font-size: calc(2.3rem + 1.0000625vw);
+	}
+	.page-future .page-head h1 {
+		max-width: 47.3333333333rem;
+		text-wrap: balance;
+	}
+}
+
+@media (max-width: 576px) {
+	.item-space__description {
+		background-color: #121212;
+		color: #ededed;
+		padding: 1rem 2rem;
+		margin: 20px 0 70px;
+	}
+}
+
+.pro-futbolku {
+	margin: 50px 0;
+}
+.small-text {
+	color: #797979;
+	line-height: 1.2;
+}
+
+/*animation*/
+
+.headerBlock {
+	background: #000;
+	overflow: hidden;
+	animation-name: pulse;
+	animation-duration: 30s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+
+@keyframes pulse {
+	from {
+		background: #000;
+	}
+	25% {
+		background: #003;
+	}
+	50% {
+		background: #030;
+	}
+	to {
+		background: #000;
+	}
+}
+
+.back-animation,
+p.hidden-hidden {
+	// z-index: 0;
+	// color: rgba(0, 0, 0, 0);
+}
+.back-animation {
+	@include a-cent;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+}
+
+#fog {
+	animation-duration: 30s;
+}
+#fog,
+#fog-2 {
+	position: absolute;
+	z-index: -1;
+	top: 50%;
+	left: 50%;
+	--size: max(140vw, 140vh);
+	width: var(--size);
+	aspect-ratio: 1;
+	margin-top: calc(var(--size) / -2);
+	margin-left: calc(var(--size) / -2);
+	opacity: 0.5;
+	animation-name: fogAnimation;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+	overflow: hidden;
+	&::before {
+		content: "";
+		position: absolute;
+		@include a-cent;
+		background: url(../img/fog.png) repeat-x 0 center;
+		animation: fogAnimationBg 120s linear infinite;
+	}
+}
+
+#fog-2 {
+	opacity: 1;
+
+	animation-duration: 120s;
+	&::before {
+		animation-duration: 80s;
+	}
+}
+
+@keyframes fogAnimationBg {
+	from {
+		transform: translateX(-10%);
+	}
+	to {
+		transform: translateX(10%);
+		// background-position: 1000px center;
+	}
+}
+@keyframes fogAnimation {
+	from {
+		-webkit-transform: rotate(0deg);
+		// background-position: 0 center;
+	}
+	to {
+		-webkit-transform: rotate(360deg);
+		// background-position: 1000px center;
+	}
+}
+
+#glow {
+	z-index: -1;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	--size: 140%;
+	width: var(--size);
+	aspect-ratio: 1;
+	margin-left: calc(var(--size) / -2);
+	margin-top: calc(var(--size) / -2);
+	background: url(../img/glow.png) repeat-x 0 0;
+	animation-name: glowAnimation;
+	animation-duration: 5s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+
+@keyframes glowAnimation {
+	from {
+		opacity: 1;
+	}
+	50% {
+		opacity: 0.75;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+#light {
+	z-index: -1;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	--size: 800px;
+	width: var(--size);
+	aspect-ratio: 1;
+	margin-left: calc(var(--size) / -2);
+	margin-top: calc(var(--size) / -2);
+	background: url(../img/light.png) no-repeat center center;
+	animation-name: lightAnimation;
+	animation-duration: 1s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+
+@keyframes lightAnimation {
+	from {
+		opacity: 0.25;
+	}
+	50% {
+		opacity: 0.5;
+	}
+	to {
+		opacity: 0.25;
+	}
+}
+
+#stars,
+#stars-2,
+#small-stars,
+#small-stars-2 {
+	z-index: -1;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	--size: 600px;
+	width: var(--size);
+	aspect-ratio: 1;
+	margin-left: calc(var(--size) / -2);
+	margin-top: calc(var(--size) / -2);
+	background: url(../img/stars-large.png) no-repeat center center;
+	animation-name: starsLarge;
+	animation-duration: 60s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+
+#stars-2 {
+	animation-name: starsLargeAlt;
+	animation-duration: 45s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+
+#small-stars {
+	animation-duration: 15s;
+	animation-name: starsSmall;
+}
+#small-stars,
+#small-stars-2 {
+	background: url(../img/stars-small.png) no-repeat center center;
+}
+
+#small-stars-2 {
+	animation-name: starsSmallAlt;
+	animation-duration: 30s;
+}
+
+@keyframes starsLargeAlt {
+	from {
+		transform: rotate(180deg) scale(3);
+		opacity: 0.25;
+	}
+	to {
+		transform: rotate(360deg) scale(0.5);
+		opacity: 0;
+	}
+}
+
+@keyframes starsSmall {
+	from {
+		transform: rotate(360deg) scale(3);
+		opacity: 0.25;
+	}
+	to {
+		transform: rotate(0deg) scale(0.5);
+		opacity: 0;
+	}
+}
+
+@keyframes starsSmallAlt {
+	from {
+		transform: rotate(0deg) scale(3);
+		opacity: 0.1;
+	}
+	to {
+		transform: rotate(360deg) scale(0.5);
+		opacity: 0;
+	}
+}
