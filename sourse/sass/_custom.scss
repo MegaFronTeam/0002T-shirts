@@ -133,14 +133,14 @@
 
 /*animation*/
 
-.headerBlock {
-	background: #000;
-	overflow: hidden;
-	animation-name: pulse;
-	animation-duration: 30s;
-	animation-iteration-count: infinite;
-	animation-timing-function: linear;
-}
+// .headerBlock {
+// 	background: #000;
+// 	overflow: hidden;
+// 	animation-name: pulse;
+// 	animation-duration: 30s;
+// 	animation-iteration-count: infinite;
+// 	animation-timing-function: linear;
+// }
 
 @keyframes pulse {
 	from {
