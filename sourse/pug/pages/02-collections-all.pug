@@ -23,20 +23,23 @@ block pagecontent
 	+parts('header')
 	main
 		+page-head(title) 
-		
+	
 		+b.categories
-			.container
 				mixin item(i,p1, p2)
-					+b.item-categories 
-						.img-wrap(href="#")
-							img(src=`img/categories-${i}.png`, loading="lazy", alt="").res-i
-						.description
-							a(href="#")= p1
-				+item('1','first')
-				+item('2','second')
-				+item('3','gold collection')
-				+item('4','mix')
-				+item('5','teslab')
-				+item('6','space collection')
-				+item('7','the future of fantasy')
+					+b.item-categories(href="#") 
+						.img-wrap
+							img(src=`img/first_fon/${i}_fon.svg`, loading="lazy", alt="").img-fon.res-i
+						.container
+							.description
+								span= p1
+							img(src=`img/first_fon/${i}_img.png`, loading="lazy", alt="").img-img.res-i
+				+item('first','first')
+				+item('second','second')
+				+item('gold','gold collection')
+				+item('mix','mix')
+				+item('teslab','teslab')
+				+item('space','space collection')
+				+item('future','the future of fantasy')
+
+
 	+parts('footer')
